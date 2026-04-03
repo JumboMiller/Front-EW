@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Elemental Wars — Official Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Landing page and web frontend for [Elemental Wars](https://wax.atomichub.io/explorer/collection/elementalwar) — a play-to-earn NFT game built on the WAX blockchain.
 
-## Available Scripts
+Built for players and collectors who want to explore the game, learn about the EWARS token, and access the NFT marketplace.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Single-page marketing site for the Elemental Wars game
+- Interactive element selector (Fire, Water, Earth, Air) with animated mage previews
+- Sections for game lore: Magic, Lands, Token, Tokenomics, Pre-sale
+- Direct link to the AtomicHub NFT collection
+- Responsive layout using Bootstrap 5
+- WAX wallet integration libraries included (`@waxio/waxjs`, `anchor-link`)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer        | Library / Tool                        |
+|--------------|---------------------------------------|
+| Framework    | React 17                              |
+| Routing      | React Router DOM 5                    |
+| Styling      | Bootstrap 5, Animate.css, custom CSS  |
+| Blockchain   | WAX (`@waxio/waxjs`, `anchor-link`)   |
+| HTTP client  | Axios                                 |
+| Tooling      | Create React App                      |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js ≥ 14
+- npm ≥ 6
 
-### `npm run eject`
+### Install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/JumboMiller/Front-EW.git
+cd Front-EW
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Run locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Opens at [http://localhost:3000](http://localhost:3000). The page hot-reloads on file changes.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Command           | Description                                      |
+|-------------------|--------------------------------------------------|
+| `npm start`       | Start the development server on port 3000        |
+| `npm run build`   | Build the app for production into `build/`       |
+| `npm test`        | Run tests in interactive watch mode              |
+| `npm run eject`   | Eject CRA config (irreversible)                  |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+```
+src/
+├── App.js          # Router setup — single route renders Home
+├── Home.js         # Main page: navbar, element sections, token info, footer
+├── App.css         # Global and component-specific styles
+├── fonts/          # Custom font files
+└── img/            # All image assets (logos, backgrounds, mage sprites, tokens)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+public/
+└── manifest.json   # PWA manifest (name: "Elemental Wars", short_name: "EWARS")
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
+Build the static output and deploy to any static hosting provider:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+The `build/` directory contains the production-ready app. Compatible with Netlify, Vercel, GitHub Pages, or any CDN.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- NFT Collection: [atomichub.io/explorer/collection/elementalwar](https://wax.atomichub.io/explorer/collection/elementalwar)
+- Whitepaper: [elementalwarss.gitbook.io/elemental-wars](https://elementalwarss.gitbook.io/elemental-wars/)
+- Twitter: [@PlayElementals](https://twitter.com/PlayElementals)
+- Telegram: [t.me/elementalwars](https://t.me/elementalwars)
+- Medium: [@elementalwarss](https://medium.com/@elementalwarss)
+
+---
+
+## License
+
+This project is private. All rights reserved by ARKAD.  
+Contact: elementalwarss@gmail.com
